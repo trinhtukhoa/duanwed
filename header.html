@@ -1,0 +1,138 @@
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    :root {
+        --bg1: #a9115b;
+        --bg2: #3722bc;
+        --bg3: #e42688;
+    }
+
+    .Nen {
+        background: linear-gradient(to bottom right, var(--bg1), var(--bg2), var(--bg3)) !important;
+    }
+
+    /* Phần dropdow menu */
+    .navbar-nav .nav-item .dropdown-menu {
+        display: none;
+        position: absolute;
+        opacity: 0;
+        /* Ẩn dropdown ban đầu */
+        visibility: hidden;
+        animation: fadeInDown 0.5s ease-in-out;
+        /* Thêm hiệu ứng chậm chậm */
+
+        /* Optional: Thêm styles để làm đẹp dropdown */
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar-nav .nav-item:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        /* Hiển thị dropdown khi hover */
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    /* Tạo keyframes animation */
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<!-- Header -->
+<header class="bg-body-tertiary Nen py-3" >
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="nav-item d-flex align-items-center">
+                <!-- Spinner -->
+                <div class="spinner-grow spinner-grow-sm text-danger me-3 flex-shrink-0" role="status">
+                   
+                </div>
+                
+                <!-- Tìm kiếm -->
+                <form class="d-flex" role="search">
+                    <input type="text" ng-model="keySearch" ng-change="search(keySearch)" class="form-control bg-white rounded-5 me-1" placeholder="Tìm kiếm ?" aria-label="Search">
+                </form>
+
+            </div>
+            <div class="d-flex align-items-center">
+            
+            </div>
+        </div>
+    </div>
+   
+</header>
+
+<!-- Menu -->
+<nav class="container-fluid navbar navbar-expand-md sticky-top bg-light" ng-controller="myCtrl">
+    <div class="container-fluid">
+        <!-- Logo thương hiệu -->
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="" class="img-fluid ms-3">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark ms-3 fw-bold" aria-current="page" href="#!DuLich">
+                        <i class="bi bi-house-fill me-1"></i> TRANG CHỦ
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark ms-3 fw-bold" href="#!GioiThieu">
+                        <i class="bi bi-border-width me-1"></i>GIỚI THIỆU
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark ms-3 dropdown-toggle fw-bold" href="" id="navbarDropdownTour"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe-americas me-1"></i> TOUR
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownTour">
+                        <li><a class="dropdown-item" href="">Tour trong nước</a></li>
+                        <li><a class="dropdown-item" href="#!Tour">Tour TRUNG QUỐC</a></li>
+                        <li><a class="dropdown-item" href="#">TOUR AI CẬP</a></li>
+                    </ul>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link text-dark ms-3 fw-bold" href="#!LienHe">
+                        <i class="bi bi-telephone-fill me-1"></i>LIÊN HỆ
+                    </a>
+                </li>
+            </ul>
+            
+            <a class="link-secondary position-relative me-3" href="#!GioHang">
+                <i class="bi bi-cart4 fs-3 text-dark"></i>
+                <span ng-if="getCartItemCount() > 0"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{getCartItemCount()}}
+                </span>
+            </a>
+
+            <!-- Đăng nhập -->
+            <div class="d-flex align-items-center">
+                <a class="link-secondary me-3" href="DangNhap.html">
+                    <i class="bi bi-person-circle fs-3 text-dark"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

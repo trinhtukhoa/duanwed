@@ -1,0 +1,108 @@
+
+[
+  {
+    "id": "p1",
+    "name": "DU LỊCH-BẾN TRE",
+    "content": "Bến Tre là khu vực trù phú nhất vùng Tây Nam Bộ, được tạo thành từ cù lao Minh, cù lao Bảo, và cù lao An Hóa. Nơi đây sở hữu hệ thống sông ngòi dày đặc với đường bờ biển dài bao quanh, tạo nên một Bến Tre trù phú, màu mỡ nhờ phù sa. Du lịch Bến Tre cho bạn trải nghiệm tuyệt vời bênnhững vườn dừa rộng lớn. Đặc biệt, cảm giác xuôi thuyền trên sông, thưởng thức đặc sản Bến Tre,những món ăn độc đáo từ nguồn thủy hải sản dồi dào cũng vô cùng hấp dẫn.",
+    "image": "bentre",
+    "kind": "phone",
+    "price": "3000000 VND",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p2",
+    "name": "DU LỊCH-CẦN THƠ",
+    "content": "Nổi tiếng từ rất lâu nhưng đến nay, chợ nổi Cái Răng vẫn là nơi du ngoạn tuyệt vời nếu bạn vẫnthắc mắc nên đi địa điểm du lịch Cần Thơ nào. Trên dòng Cửu Long xinh đẹp, bạn sẽ tìm thấy rất nhiều thuyền hàng tấp nập, buôn bán đủ loại hàng hoá, thực phẩm,... bên trên. Tất cả tạo nên mộtkhung cảnh sôi động, rực rỡ rất “miền Tây.",
+    "image": "cantho",
+    "kind": "phone",
+    "price": "3500000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p3",
+    "name": "DU LỊCH-CHÂU ĐỐC",
+    "content": "Chùa Hang Hà Tĩnh nằm ở trên ngọn núi Hồng Lĩnh tọa lạc tại tổ dân phố 10, phường Bắc Hồng,   Hồng Lĩnh, tỉnh Hà Tĩnh. Nơi đây là một trong những di tích được lưu giữ trọn vẹn gắn liền vớ những truyền thống văn hóa, lịch sử của dân tộc Việt Nam ở sườn phía Tây của dãy núi Hồng Lĩnh. Đặc biệt hơn, Ngôi chùa còn sở hữu cung Tam Bảo được đặt phía bên trong hang đá với trước mắt làtrải dài một thung lũng bao la, bát ngát tràn ngập sắc xanh.",
+    "image": "chuahang",
+    "kind": "phone",
+    "price": "4500000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+  {
+    "id": "p4",
+    "name": "Núi Bà Đen - Tây Ninh",
+    "content": "Núi Bà Đen, nằm sừng sững giữa vùng đồng bằng ngoại ô Tây Ninh, nơi được mệnh danh là nóc nhà Nam Bộ, là điểm hội tụ linh khí thiên địa và cũng là nơi trao gửi niềm tin của nhiều Phật Tử miền Nam.",
+    "image": "TayNinh",
+    "kind": "laptop",
+    "price": "3600000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p5",
+    "name": "DU LỊCH  KIÊN GIANG",
+    "kind": "phone",
+    "content": "Đến đây bạn có thể trải nghiệm cảm giác lặn ngắm san hô đầy thú vị với nhiều màu sắc bắt mắt độc đáo tận hưởng những bữa ăn dân dã địa phương tại nơi đây.",
+    "image": "NamDu",
+    "price": "2400000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p6",
+    "name": "DU LỊCH HỒ TRÀM - VŨNG TÀU",
+    "content": "Biển Hồ Tràm rất đẹp, cát sạch mịn vàng ươm rất dễ chịu, khung cảnh rừng dương xỉ ven bãi biển trải dài tạo nên một bức tranh thiên nhiên lãng mạn vô cùng.",
+    "image": "HoTram",
+    "kind": "laptop",
+    "price": "250000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p7",
+    "name": "DU LỊCH Hạ Long",
+    "content": "Đến đây bạn có thể trải nghiệm cảm giác lặn ngắm san hô đầy thú vị với nhiều màu sắc bắt mắt độc đáo tận hưởng những bữa ăn dân dã địa phương tại nơi đây.",
+    "image": "HaLong1",
+    "price": "530000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+
+  {
+    "id": "p8",
+    "name": "DU LỊCH  Đà Nẵng",
+    "content": "chào mừng đến TP Đà Nẵng",
+    "image": "DaNang",
+    "kind": "laptop",
+    "price": "60000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  },
+  {
+    "id": "p9",
+    "name": "DU LỊCH VÒNG QUANH - HCM",
+    "content": "Biển Hồ Tràm rất đẹp, cát sạch mịn vàng ươm rất dễ chịu, khung cảnh rừng dương xỉ ven bãi biển trải dài tạo nên một bức tranh thiên nhiên lãng mạn vô cùng.",
+    "image": "BENTHANH",
+    "kind": "laptop",
+    "price": "1200000 VND",
+    "security": "Uy tín số 2 Việt Nam",
+    "duration": "8/3/2024",
+    "transport": "Xe giường nằm"
+  }
+  
+
+]

@@ -1,0 +1,451 @@
+<style>
+    :root {
+        --bg1: #9b59b6;
+        --bg2: #1106a9;
+        --bg3: #e11743;
+    }
+
+    .Nen {
+        background: linear-gradient(to bottom right, var(--bg1), var(--bg2), var(--bg3)) !important;
+    }
+
+    /* Phần dropdow menu */
+    .navbar-nav .nav-item .dropdown-menu {
+        display: none;
+        position: absolute;
+        opacity: 0;
+        /* Ẩn dropdown ban đầu */
+        visibility: hidden;
+        animation: fadeInDown 0.5s ease-in-out;
+        /* Thêm hiệu ứng chậm chậm */
+
+        /* Optional: Thêm styles để làm đẹp dropdown */
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar-nav .nav-item:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        /* Hiển thị dropdown khi hover */
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    /* Tạo keyframes animation */
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .custom-margin {
+        margin-bottom: 20px;
+    }
+
+    /*** Blog ***/
+</style>
+
+<!-- Article -->
+<!-- Carousel Hình ảnh -->
+<article class="col-12">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/banner-ninh-binh.webp" class="d-block w-85 img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/thiet-ke-website-du-lich.jpg" class=" d-block w-100 img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/caubantay.webp" class=" d-block w-85 img-fluid" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Nội dung giới thiệu -->
+
+
+
+    <!-- Tour nổi bậc -->
+    <div class="container-fluid" custom-margin>
+
+       <div class="white-divider" style="width: 100%; height: 70px; background-color: rgb(255, 255, 255);"></div>
+<main style="background: linear-gradient(to bottom, rgb(235, 113, 47), #ee1c5f);">
+    <div class="icon-container" style="background-color: #ffffff;">
+
+            </div>
+
+            <!--  Tour trong nước -->
+            <div class="container-fluid mt-3">
+                <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+                    <div class="container-fluid d-flex">
+                        <a class="navbar-brand fw-bold" href="#">Tour trong nước</a>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Nam</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">Trung</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">Bắc</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+
+            <!--  Hiệu ứng hình ảnh thẻ card -->
+            <style>
+                .card {
+                    overflow: hidden;
+                }
+
+                .card img {
+                    transition: transform 1s ease;
+                }
+
+                .card:hover img {
+                    transform: scale(0.9);
+                }
+
+                .card:hover {
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                }
+
+                .card img {
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
+
+            <div class="container-fluid mt-2 mb-2">
+                <div class="products">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+
+                            <!-- Nam -->
+
+                            <div ng-controller="myCtrl">
+                                <button class="btn btn-primary" ng-click="tang()">Tăng dần</button>
+                                <button class="btn btn-primary" ng-click="giam()">Giảm dần</button>
+
+
+
+                                <h1>TOUR SÔNG NƯỚC</h1>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4 col-lg-3 my-3"
+                                        ng-repeat="p in products |filter: {kind : 'phone'} | filter: keySearch | orderBy : sort">
+                                        <div class="card">
+                                           
+                                            <img ng-src="images/{{p.image}}.jpg" class="card-img-top img-fluid rounded"
+                                                style="height: 250px;">
+
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between fw-bold">
+                                                    <span class="font-weight-bold">{{p.name}}</span>
+
+                                                </div>
+                                                <p class="card-text mb-1 mt-1 fw-bold">Thời gian: {{p.duration}}</p>
+                                                <span class="font-weight-bold">{{p.price}}</span>
+                                                <div class="d-flex align-items-center flex-row">
+                                                    <i class="bi bi-shield-fill-exclamation"></i><span
+                                                        class="guarantee">{{p.security}}</span>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-body">
+                                                <div class="text-right buttons">
+                                                    <a ng-href="#!ChiTiet/{{p.id}}" class="btn btn-outline-dark">Chi
+                                                        tiết</a>
+                                                    <a class="btn btn-dark">Thêm vào giỏ hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <h1>TOUR Biển</h1>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4 col-lg-3 my-3"
+                                        ng-repeat="p in products |filter: {kind : 'laptop'} | filter: keySearch | orderBy : sort">
+                                        <div class="card">
+                                            <span class="font-weight-bold">{{p.name}}</span>
+                                            <img ng-src="images/{{p.image}}.jpg" class="card-img-top img-fluid rounded"
+                                                style="height: 250px;">
+
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between fw-bold">
+                                                    <span class="font-weight-bold">{{p.name}}</span>
+
+                                                </div>
+                                                <p class="card-text mb-1 mt-1 fw-bold">Thời gian: {{p.duration}}</p>
+                                                <span class="font-weight-bold">{{p.price}}</span>
+                                                <div class="d-flex align-items-center flex-row">
+                                                    <i class="bi bi-shield-fill-exclamation"></i><span
+                                                        class="guarantee">{{p.security}}</span>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-body">
+                                                <div class="text-right buttons">
+                                                    <a ng-href="#!ChiTiet/{{p.id}}" class="btn btn-outline-dark">Chi
+                                                        tiết</a>
+                                                    <a class="btn btn-dark">Thêm vào giỏ hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+</article>
+
+
+<!--Trung-->
+<div class="Nen" style="background-color: #FFA07A;">
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 my-3"
+            ng-repeat="p in products |filter: {kind : 'laptop'} | filter: keySearch | orderBy : sort">
+            <div class="card">
+                <span class="font-weight-bold">{{p.name}}</span>
+                <img ng-src="images/{{p.image}}.jpg" class="card-img-top img-fluid rounded" style="height: 250px;">
+
+                <div class="card-body">
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span class="font-weight-bold">{{p.name}}</span>
+
+                    </div>
+                    <p class="card-text mb-1 mt-1 fw-bold">Thời gian: {{p.duration}}</p>
+                    <span class="font-weight-bold">{{p.price}}</span>
+                    <div class="d-flex align-items-center flex-row">
+                        <i class="bi bi-shield-fill-exclamation"></i><span class="guarantee">{{p.security}}</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <div class="text-right buttons">
+                        <a ng-href="#!ChiTiet/{{p.id}}" class="btn btn-outline-dark">Chi tiết</a>
+                        <a class="btn btn-dark">Thêm vào giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<style>
+    /* CSS */
+
+    .colored-space {
+        background: linear-gradient(to right, #8e1111, #32049e, #b31f6b);
+        /* Thay thế bằng mã màu bạn mong muốn */
+        height: 20px;
+        /* Điều chỉnh chiều cao theo nhu cầu */
+    }
+
+    .card-shadow:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        /* Thêm hiệu ứng viền khi di chuột vào */
+        transition: box-shadow 0.3s ease;
+        /* Thêm hiệu ứng chuyển động */
+    }
+
+    .pro-pic img {
+        width: 100%;
+        /* Làm cho hình ảnh điền vào phần tử cha của nó */
+        height: 100%;
+        /* Đảm bảo hình ảnh chiếm đầy đủ chiều cao của phần tử cha */
+        object-fit: cover;
+        /* Đảm bảo hình ảnh không bị bóp méo */
+    }
+</style>
+<div class="py-1 team1">
+    <div class="container-fluid" custom-margin>
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-7 text-center">
+                <h6 class="subtitle font-weight-normal">THAM GIA HOẠT ĐỘNG TỪ THIỆN CÙNG CHÚNG TÔI</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third col-md-4">
+                <a href="#" class="img-caption">
+                    <figure>
+                        <img src="images/truong.jpg" class="img-fluid" alt="" />
+                        <figcaption>
+                            <h3>CÙNG CHÚNG TÔI XÂY TRƯỜNG CHO CÁC EM</h3>
+                            <span>Những thửa ruộng bậc thang lúa chín vàng rộ trên những sườn núi là hình ảnh tuyệt đẹp
+                                của miền bắc hấp dẫn khách du lịch khắp nơi.</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="one-third col-md-4">
+                <a href="#" class="img-caption">
+                    <figure>
+                        <img src="images/TANG.jpg" class="img-fluid" alt="" />
+                        <figcaption>
+                            <h3>CÙNG CHÚNG TÔI TẶNG QUÀ CHO CÁC EM</h3>
+                            <span>Đà Nẵng được mệnh danh là “thành phố đáng sống nhất Việt Nam” bởi sở hữu thiên nhiên
+                                trù phú và nếp sống văn minh hiếm nơi nào có được.</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="one-third col-md-4">
+                <a href="#" class="img-caption">
+                    <figure>
+                        <img src="images/CHOI.jpg" class="img-fluid" alt="" />
+                        <figcaption>
+                            <h3>VUI CHƠI VỚI CÁC EM</h3>
+                            <span>Thời điểm tuyệt vời nhất để trải nghiệm mùa tắm biển tại Nha Trang là vào mùa hè – Một
+                                trong những điểm đến du lịch hàng đầu của Việt Nam.</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        </main>
+
+        <div class="colored-space"></div>
+        <!-- Blog -->
+        <style>
+            /* CSS */
+
+            .card-shadow:hover {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                /* Thêm hiệu ứng viền khi di chuột vào */
+                transition: box-shadow 0.3s ease;
+                /* Thêm hiệu ứng chuyển động */
+            }
+
+            .pro-pic img {
+                width: 100%;
+                /* Làm cho hình ảnh điền vào phần tử cha của nó */
+                height: 100%;
+                /* Đảm bảo hình ảnh chiếm đầy đủ chiều cao của phần tử cha */
+                object-fit: cover;
+                /* Đảm bảo hình ảnh không bị bóp méo */
+            }
+        </style>
+        <div class="py-1 team1">
+            <div class="container-fluid" custom-margin>
+                <div class="row justify-content-center mb-3">
+                    <div class="col-md-7 text-center">
+                        <h6 class="subtitle font-weight-normal">HÌNH ẢNH ĐẸP CỦA NH CHUYẾN TOUR</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/RuongBacThang.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Ruộng bậc thang - Hà Giang</h3>
+                                    <span>Những thửa ruộng bậc thang lúa chín vàng rộ trên những sườn núi là hình ảnh
+                                        tuyệt đẹp của miền bắc hấp dẫn khách du lịch khắp nơi.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/DaNang.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Đà Nẵng</h3>
+                                    <span>Đà Nẵng được mệnh danh là “thành phố đáng sống nhất Việt Nam” bởi sở hữu thiên
+                                        nhiên trù phú và nếp sống văn minh hiếm nơi nào có được.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/NhaTrang1.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Biển Nha Trang</h3>
+                                    <span>Thời điểm tuyệt vời nhất để trải nghiệm mùa tắm biển tại Nha Trang là vào mùa
+                                        hè – Một trong những điểm đến du lịch hàng đầu của Việt Nam.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/CaiRangCanTho.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Cái Răng _Cà Thơ</h3>
+                                    <span>Vốn được mệnh danh là Tây Đô–Thủ phủ của miền Tây Nam bộ từ hơn trăm năm
+                                        trước. "Tây Đô" vẫn giữ lại những nét văn hoá đặc trưng của miền sông
+                                        nước.</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/TayNguyen.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Tây Nguyên</h3>
+                                    <span>Tây Nguyên không chỉ đẹp bởi thiên nhiên núi rừng phong phú mà còn bởi những
+                                        nét đặc trưng văn hóa truyền thống người đồng bào nơi đây. </span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="one-third col-md-4">
+                        <a href="#" class="img-caption">
+                            <figure>
+                                <img src="images/HoiAn.jpg" class="img-fluid" alt="" />
+                                <figcaption>
+                                    <h3>Hội An</h3>
+                                    <span>Có nhiều kiến trúc độc đáo của các ngôi nhà cổ, tận mắt chứng kiến những chiếc
+                                        đèn lồng lung linh treo khắp nơi, tạo nên một khung cảnh vô cùng đẹp mắt</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
